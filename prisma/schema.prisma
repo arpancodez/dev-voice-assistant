@@ -1,0 +1,41 @@
+// Prisma Schema for Dev Voice Assistant
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// User model - stores unique users
+model User {
+  id        String    @id @default(uuid())
+  email     String?   @unique
+  name      String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  commands  Command[]
+
+  @@map("users")
+}
+
+// Command model - stores voice command history
+model Command {
+  id          String   @id @default(uuid())
+  userId      String
+  transcript  String   // The transcribed voice input
+  context     String?  // Additional context (URL, code snippet, etc.)
+  response    String   // AI-generated response
+  commandType String   // Type: github_pr, error_log, commit_msg, etc.
+  metadata    String?  // JSON string for additional data
+  createdAt   DateTime @default(now())
+  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([createdAt])
+  @@index([commandType])
+  @@map("commands")
+}
