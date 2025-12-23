@@ -243,6 +243,62 @@ Arpan - [@arpancodez](https://github.com/arpancodez)
 
 Project Link: [https://github.com/arpancodez/dev-voice-assistant](https://github.com/arpancodez/dev-voice-assistant)
 
+## 🗓️ Roadmap
+
+### v1.0 (Current)
+- ✅ Core voice recognition with Web Speech API
+- ✅ LLM integration with OpenAI GPT-4
+- ✅ Command history with database persistence
+- ✅ One-click copy for AI responses
+- ✅ Developer-focused command types
+- ✅ Modern UI with Tailwind CSS and Zustand state management
+- ✅ Comprehensive documentation
+- 🚧 UI polish with state indicators (listening/thinking/speaking)
+- 🚧 Settings panel for API key configuration
+- 🚧 Microphone permission handling UI
+
+### v1.1 (Planned)
+- [ ] **Streaming Responses**: Real-time response streaming with Server-Sent Events (SSE)
+- [ ] **Additional LLM Providers**: Support for Anthropic Claude, Ollama, local models
+- [ ] **Advanced Command Types**:
+  - Code review and suggestions
+  - Git commit message generation
+  - Bug report generation
+  - Documentation generation
+- [ ] **History Search**: Full-text search in command history
+- [ ] **Export/Import**: Save and load command history
+- [ ] **Dark Mode**: Theme support for dark mode
+
+### v2.0 (Future)
+- [ ] **Multi-tenancy**: Support for teams and shared workspaces
+- [ ] **Real-time Collaboration**: WebSocket support for shared sessions
+- [ ] **Plugin System**: Allow third-party extensions for custom commands
+- [ ] **RAG Integration**: Retrieval-Augmented Generation for context-aware responses
+- [ ] **Analytics Dashboard**: Usage statistics and insights
+- [ ] **Browser Extensions**: Quick access from any website
+- [ ] **Mobile App**: Native iOS/Android applications
+- [ ] **API Rate Limiting**: Implement smart rate limiting and quotas
+- [ ] **Advanced Context Processing**: Support for files, URLs, and clipboard content
+
+## 📋 Known Limitations
+
+- **Browser Support**: Web Speech API may not work in all browsers. Tested on Chrome, Edge, and Safari.
+- **API Rate Limiting**: OpenAI API has usage limits. Implement backoff strategies for production.
+- **Microphone Access**: Requires HTTPS in production and explicit user permission.
+- **Database**: Currently uses SQLite. Migrate to PostgreSQL/Supabase for production deployments.
+
+## 🐛 Reporting Issues
+
+Found a bug? Please use the [bug report template](https://github.com/arpancodez/dev-voice-assistant/issues/new?template=bug_report.md) to report issues.
+
+## 💡 Feature Requests
+
+Have an idea? Use the [feature request template](https://github.com/arpancodez/dev-voice-assistant/issues/new?template=feature_request.md) to suggest new features.
+
+---
+
+**Built with ❤️ by developers, for developers.**
+
 ---
 
 Built with ❤️ by developers, for developers.
